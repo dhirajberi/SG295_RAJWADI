@@ -1,3 +1,11 @@
+<?php
+  session_start();
+  if ( ! isset($_SESSION['name']) ) 
+  {
+	header("Location: login.php");
+  }
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -10,15 +18,49 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-  <link rel="stylesheet" type="text/css" href="style.css">
-
   <title>Schemes | Govt. of Sikkim</title>
 </head>
 
 <body>
+    <!-- Header -->
+  <div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light .bg-white">
+  <a class="navbar-brand" href="#"><img src="ne1.png"></a>
+  <a class="navbar-brand" href="#"><img src="rsz_nf.jpg"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</div>
+
+  <!-- Header ends -->
+  <!-- Slider -->
+<div class="container">
+  <img src="uh.jpeg" class="d-block w-100 mb-4" alt="...">
+</div>
+<!-- Slider ends -->
+
+   <div class="container"> 
   <div class="form-signin">
+    <center><img class="mb-4" src="govtlogo.png" alt="" width="150" height="150">
+    <h1 class="h4 mb-3 font-weight-normal">GOVERNMENT OF SIKKIM</h1>
     <a class="btn btn-lg btn-primary btn-block" href="all-scheme.php" role="button">All Schemes</a>
     <a class="btn btn-lg btn-primary btn-block" href="eligible-scheme.php" role="button">Eligible Schemes</a>
+  </div>
   </div>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
