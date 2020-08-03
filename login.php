@@ -18,6 +18,7 @@
 	  	while($row=mysqli_fetch_assoc($result))
 	  	{
         $name = $row['name'];
+        $r_id = $row['r_id'];
         $phone =  '91'.$row['phone'];
         $adhar =  $row['adhar'];
         $salary =  $row['salary'];
@@ -27,6 +28,7 @@
         $sex = $row['sex'];
 
         $_SESSION['name']=$name;
+        $_SESSION['r_id']=$r_id;
         $_SESSION['phone']=$phone;
         $_SESSION['adhar']=$adhar;
         $_SESSION['salary']=$salary;
@@ -62,7 +64,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  
+
   <title>Login Page | Govt. of Sikkim</title>
 </head>
 
@@ -110,11 +112,11 @@
   </form>
 </div>
 
-  <div class="container my-4">
-<footer class="blog-footer">
+<footer class="footer">
+  <div class="container">
       <p>Copyright © 2020 Department of Information and Technology, Government of Sikkim.</p>
+  </div>
 </footer>
-</div>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
